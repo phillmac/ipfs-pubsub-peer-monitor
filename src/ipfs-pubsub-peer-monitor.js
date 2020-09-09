@@ -59,7 +59,7 @@ class IpfsPubsubPeerMonitor extends EventEmitter {
 
     async _pollPeers() {
         try {
-            const peers = await this._pubsub.peers(this._topic, { signal: this._signal })
+            const peers = await this._pubsub.peers(this._topic, { signal: this._signal }) //Pass abort signal to ipfs-http-client
             IpfsPubsubPeerMonitor._emitJoinsAndLeaves(new Set(this._peers), new Set(peers), this)
             this._peers = peers
         } catch (err) {
