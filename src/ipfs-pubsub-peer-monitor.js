@@ -2,6 +2,8 @@
 
 const { difference } = require('./utils')
 const EventEmitter = require('events')
+const AbortController = require('abort-controller');
+
 
 const DEFAULT_OPTIONS = {
     start: true,

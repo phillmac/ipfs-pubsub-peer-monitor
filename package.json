@@ -9,6 +9,7 @@
   "author": "Haad",
   "license": "MIT",
   "dependencies": {
+    "abort-controller": "^3.0.0",
     "p-forever": "^1.0.1"
   },
   "devDependencies": {
